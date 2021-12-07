@@ -15,7 +15,7 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    descripcion: { //bro este no aparece en lo que tare la api o sea no veo una descripcion jaja
+    description: { //bro este no aparece en lo que tare la api o sea no veo una descripcion jaja
       type: DataTypes.STRING,
       allowNull: false,
     },
