@@ -68,7 +68,7 @@ const busquedaId = async (req, res) => {
 }
 
 const createVideogames = async (req, res) => {
-    try {
+    
         const { name, description, released_at, rating, platforms, genreB} = req.body;
         const newGame = await Videogame.create({
             name, 
@@ -78,14 +78,12 @@ const createVideogames = async (req, res) => {
             platforms
         })
         let genrEn = await Genre.findAll({
-            where : {name: genreB }
+            where: {name:genreB }
         })
-        newGame.addGenre(genrEn)
+        newGame.addGenre(genrEn);
         res.send("ya fuiste creado")
-    } catch (error) {
-        console.log(error);
-    }
-}
+} 
+
 
 module.exports = {getInfoApi, joinApiBd, busquedaTotal, busquedaId, createVideogames};
 
