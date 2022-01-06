@@ -1,0 +1,14 @@
+.fondoHome {
+    background-image: url('https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_1440x810/public/media/image/2016/06/604918-e3-2016-call-duty-modern-warfare-remastered.jpg?itok=VTVMSf5k');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    box-sizing: border-box;
+   height:100%;
+    
+}
+.dispVid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}

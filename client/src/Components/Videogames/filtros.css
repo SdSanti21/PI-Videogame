@@ -1,0 +1,32 @@
+.filter select {background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%)}
+.filter select {
+   margin: 10px;
+   padding: 5px 1px;
+   width: 130px;
+   height: 30px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: rgb(34, 0, 0);            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 60px;
+   display: block;
+ }
+
+ .filter select:hover {
+   background-position: right center; /* change the direction of the change here */
+   color: #fff;
+   text-decoration: none;
+ }
+ 
+ .filterSub{
+     display: flex;
+     width: 100%;
+     justify-content:center;
+ }
+ .filterToto{
+     width: 100%;
+     display: flex;
+     align-items: center;
+ }

@@ -4,7 +4,7 @@ const { DataTypes, ARRAY } = require('sequelize');
 module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('Videogame', {
-    ID: {
+    id: {
       type: DataTypes.UUID,
       allowNull: false,
       unique: true,
@@ -15,7 +15,11 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: { //bro este no aparece en lo que tare la api o sea no veo una descripcion jaja
+    image: {
+      type: DataTypes.STRING,
+      defaultValue: "https://www.trecebits.com/wp-content/uploads/2019/04/11854.jpg"
+    },
+    description: { 
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -31,6 +35,11 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    createDb: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: true,
+    }
   },{
     timestamps: false,
     createdAt: false,

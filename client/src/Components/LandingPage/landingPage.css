@@ -1,0 +1,44 @@
+.fondoLanding {
+    background-image: url('https://i.blogs.es/c66c05/mando-playstation/1024_2000.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    height: 100vh;
+    object-fit: cover;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.boton {
+    width: 140px;
+    height: 50px;
+    border-radius: 25px;
+    border:0;
+    outline:0;
+    font-size: 15px;
+    font-size: 15px;
+    font-family: 'Noto Serif';
+    cursor: pointer; 
+    position: relative;
+    background-color: #b3b3b3;
+    color: #333333;
+    letter-spacing: 3px;
+}
+
+.boton:hover {
+    background-color: #9494b8;
+    box-shadow: 0 0 10px #9494b8, 0 0 40px #9494b8, 0 0 80px #9494b8;
+    transition-delay: 0.3s;
+    background: linear-gradient(90deg, transparent, #9494b8);
+}
+
+.titulo {
+    font-family: 'Noto Serif';
+    color: #333333; 
+    position: relative;
+    letter-spacing: 3px;
+    text-align: left;
+    margin: 0;
+}

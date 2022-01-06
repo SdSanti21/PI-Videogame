@@ -1,0 +1,62 @@
+.contentPrincipal{
+    height:60px;
+    background:url('https://imgr.search.brave.com/_HIrVFgVnIQgAcb7u0RMcd6SmQwZ6qpdJ32hq94Kimo/fit/1200/1080/ce/1/aHR0cHM6Ly9nZXQu/d2FsbGhlcmUuY29t/L3Bob3RvL211bHRp/cGxlLWRpc3BsYXkt/ZHVhbC1tb25pdG9y/cy12aWRlby1nYW1l/cy1QYWMtTWFuLTEx/NzcxMzAuanBn' )center center;
+    width:100%;
+}
+.navContenedor{
+    width:100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.ulNavbar{
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+.contentPrincipal .navContenedor{
+    height:100%;
+    width:100%;
+}
+.ulNavbar .navSearch{
+width:50%;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+.ulNavbar .navCrear{
+width:50%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right:50px
+}
+.btnCrearVideojuego {
+display: flex;
+align-items: center;
+text-decoration: none;
+}
+.btnCrearVideojuego span {
+    height:100%;
+    width:100%;
+    text-decoration: none;
+}
+.btnCrearVideojuego  {background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%)}
+.btnCrearVideojuego  {
+   margin: 5px;
+   padding: 5px 1px;
+   width: 170px;
+   height: 30px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   background-size: 200% auto;
+   color: white;            
+   box-shadow: 0 0 20px #eee;
+   border-radius: 60px;
+   display: block;
+ }
+ .btnCrearVideojuego:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }

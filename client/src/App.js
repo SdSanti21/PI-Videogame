@@ -1,27 +1,26 @@
 import './App.css';
-import Navbar from './Components/Navbar/navbar';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import Videogames from './Components/Videogames'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom' //switch?
 import Formulario from './Components/Videogames/Formulario'
-import Generos from './Components/Genres/Genre'
-import Inicio from './Components/Inicio/Inicio'
+import Home from './Components/Home/Home'
 import Error from './Components/404 Not Found'
-
+import LandingPage from './Components/LandingPage/landingPage'
+import Detalle from './Components/Detalle/Detalle'
 
 function App() {
   return (
     <div className="App">
-        <Router>
-        <Navbar />
-          <Routes>
-            <Route path="/videogames" element={ <Videogames /> } />
-            <Route path="/Formulario" element={ <Formulario /> } />
-            <Route path="/Genres" element={ <Generos /> } />
-            <Route path="/Inicio" element={ <Inicio /> } />
-            <Route path="*" element={ <Error /> } />
-          </Routes>
-        </Router>
       
+       <div>
+      
+          <Routes>
+            <Route exact path="/" element={ <LandingPage /> }/>
+            <Route exact path="/Home" element={ <Home /> }/>
+            <Route exact path="/Formulario" element={ <Formulario /> } />
+            <Route exact path="/videogames/:id" element={ <Detalle /> } />
+            <Route exact path="*" element={ <Error /> } />
+          </Routes>
+        
+        </div>
     </div>
   );
 }

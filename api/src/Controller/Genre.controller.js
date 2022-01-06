@@ -16,6 +16,12 @@ const getGenres = async (req, res) => {
      res.status(200).json(genresBd);
 }
 
+const genresFrontList = async (req, res) => {
+  const genresBd = await Genre.findAll()
+  const genres = await genresBd.map(el => el.name);
+     res.status(200).json(genresBd);
+}
 
 
-module.exports = {getGenres};
+
+module.exports = {getGenres, genresFrontList };
