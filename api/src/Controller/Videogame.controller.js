@@ -52,7 +52,7 @@ const joinApiBd = async () => {
         return {
             id: el.id, 
             name: el.name.charAt(0).toUpperCase() + el.name.slice(1),
-            image: el.image,
+            image: el.image? el.image:"https://www.trecebits.com/wp-content/uploads/2019/04/11854.jpg",
             genre: el.Genres.map(el => el.name).join(', '),
             description: el.description,
             released_at: el.released_at,
@@ -61,7 +61,8 @@ const joinApiBd = async () => {
             createDb: el.createDb
         }
     })
-    const totalInfo = bdApi.concat(newCreate);
+    //const totalInfo = bdApi.concat(newCreate);
+    const totalInfo = newCreate.concat(bdApi);
     return totalInfo
 };
 
@@ -81,7 +82,7 @@ const busquedaTotal = async (req, res) => {
         console.log(error);
     }
    
-};
+};  
 
 const busquedaId = async (req, res) => {
     const { id } = req.params
@@ -96,7 +97,7 @@ const busquedaId = async (req, res) => {
 
 const createVideogames = async (req, res) => {
     
-        const { name, image, description, released_at, rating, platforms, genreB} = req.body;
+        const { name, image, description, released_at, rating, platforms, genre} = req.body;
         const newGame = await Videogame.create({
             name,
             image, 
@@ -106,7 +107,7 @@ const createVideogames = async (req, res) => {
             platforms
         })
         let genrEn = await Genre.findAll({
-            where: {name:genreB }
+            where: {name:genre }
         })
         newGame.addGenre(genrEn);
         res.send("ya fuiste creado")
@@ -144,11 +145,11 @@ const getDetalle = async (req, res) => {
                 rating: el.rating,
                 platforms: el.platforms.map(el=>el.platform.name).join(", ")
             }
-    const info = await infoBd()
-    const bmap = await info.map(el => { return {id: el.id}} )
-    const videoId = await bmap.filter(el=>el.id == id) 
-    const toto = await videoId.concat(descriptionT)
-        res.status(200).json(toto) 
+    // const info = await infoBd()
+    // const bmap = await info.map(el => { return {id: el.id}} )
+    // const videoId = await bmap.filter(el=>el.id == id) 
+    // const toto = await videoId.concat(descriptionT)
+        res.status(200).json(descriptionT) 
     } catch (error) {
         console.log(error)
     }

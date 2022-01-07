@@ -23,6 +23,8 @@ width:50%;
 display: flex;
 justify-content: flex-end;
 align-items: center;
+
+
 }
 .ulNavbar .navCrear{
 width:50%;
@@ -39,6 +41,7 @@ text-decoration: none;
     height:100%;
     width:100%;
     text-decoration: none;
+    font-family: 'Noto Serif';
 }
 .btnCrearVideojuego  {background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%)}
 .btnCrearVideojuego  {
@@ -56,7 +59,7 @@ text-decoration: none;
    display: block;
  }
  .btnCrearVideojuego:hover {
-    background-position: right center; /* change the direction of the change here */
+    background-position: right center; 
     color: #fff;
     text-decoration: none;
   }

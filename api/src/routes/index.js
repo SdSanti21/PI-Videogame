@@ -13,7 +13,7 @@ router.get("/videogames/:id", busquedaId ) //
 router.get('/genres', getGenres)
 router.get('/genre', genresFront) //RUTA PARA LOS FILTRADOS*
 router.get('/genreslist', genresFrontList)//RUTA PARA LOS FILTRADOS
-router.get('/description/:id', getDetalle)
+//router.get('/description', getDetalle)
 
 router.post('/videogame', createVideogames)
 // Configurar los routers

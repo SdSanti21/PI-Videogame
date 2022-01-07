@@ -2,7 +2,7 @@ const initialState = {
     videogames: [],
     videogamesTotal: [],
     genres: [],
-    detalleVideogames: []
+    detalleVideogames: {}
 }
 
 
@@ -68,6 +68,11 @@ function rootReducer (state = initialState, action) {
             return {
                 ...state,
                 videogamesTotal: action.payload,
+            }
+        case 'DELETE' : 
+            return {
+              ...state,
+              detalleVideogames: {}
             }
 
        default: return state

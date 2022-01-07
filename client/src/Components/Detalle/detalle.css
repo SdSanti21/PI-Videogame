@@ -1,0 +1,43 @@
+.fondoDetalle {
+    background-image: url('https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/styles/hc_1440x810/public/media/image/2016/06/604918-e3-2016-call-duty-modern-warfare-remastered.jpg?itok=VTVMSf5k');
+    height: 100vh;
+    overflow: auto;
+    font-family: 'Noto Serif';
+    display: flex;
+    justify-content: center;
+}
+
+.boton {
+    width: 140px;
+    height: 50px;
+    border-radius: 25px;
+    border:0;
+    outline:0;
+    font-size: 15px;
+    font-size: 15px;
+    font-family: 'Noto Serif';
+    cursor: pointer; 
+    position: relative;
+    background-color: #b3b3b3;
+    color: #333333;
+    letter-spacing: 2px;
+    margin: 10px 10px 0 0;
+}
+
+.image {
+    border-radius: 30px
+}
+
+.contenido {
+    border-radius: 30px;
+    background-color: rgba(2, 58, 21, 0.342);
+    box-shadow: 0px 0px 500px rgba(240, 8, 8, 0.08);
+    text-align: center;
+    margin: 5px; 
+    color: white;
+    width: 600px;
+    height: 600px;
+    border-radius: 12px;
+    background-size: cover;
+    
+}

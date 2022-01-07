@@ -4,11 +4,9 @@
     background-size: cover;
     background-attachment: fixed;
     box-sizing: border-box;
-    height: 100vh;
+    height: 100%;
     object-fit: cover;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+    
 }
 
 .boton {
@@ -25,6 +23,8 @@
     background-color: #b3b3b3;
     color: #333333;
     letter-spacing: 3px;
+    margin: 10px 180px 0 0;
+    
 }
 
 .boton:hover {
@@ -36,9 +36,16 @@
 
 .titulo {
     font-family: 'Noto Serif';
-    color: #333333; 
+    color: white; 
     position: relative;
     letter-spacing: 3px;
     text-align: left;
     margin: 0;
+}
+
+.caja2 {
+    width: 500px;
+    height: 500px;
+    padding: 80px 150px;
+
 }

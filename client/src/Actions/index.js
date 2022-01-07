@@ -72,6 +72,7 @@ export function getDetalle(id) {
     return async function (dispatch) {
         try {
             const detalleV = await axios(`${REACT_APP_SERVER}/videogames/`+id);  
+            //const detalleV = await axios(`http://localhost:3001/videogame/${id}`)
         return dispatch
         ({
             type: 'GET_DETALLE',
@@ -82,6 +83,12 @@ export function getDetalle(id) {
         }
     }
 } 
+
+export function deleteDetalle() {
+    return {
+        type: 'DELETE',
+    }
+}
 
 export function postVideogames(payload) {
     return async function () {

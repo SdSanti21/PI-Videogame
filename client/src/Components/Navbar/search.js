@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getVideogamesByName } from "../../Actions/index";
-//import './navbar.css'
+import './search.css'
 
 
 export default function Search() {
@@ -14,17 +14,17 @@ export default function Search() {
     if (videogameState.length === 0) {
       return alert("Ingrese el nombre de un videojuego");
     } else {
-      debugger
+      
       dispatch(getVideogamesByName(videogameState));
       setVideogameState("");
-      debugger
-      // alert(dispatch.message);
+      
+      alert("nombre invalido");
     }
   }
 
   return (
     <div className="search" >
-      <input
+      <input className="barra"
         type="text"
         placeholder="Search a Videogame..."
         value={videogameState}

@@ -3,6 +3,7 @@ import { useDispatch, useSelector} from 'react-redux'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import { postVideogames, GenreList  } from '../../Actions/index'
+import './formulario.css'
 
 function validateForm(input) {
     let errors = {};
@@ -60,6 +61,7 @@ export default function Formulario() {
         name: "",
         description: "",
         released_at: "",
+        image: "",
         rating: "",
         genre: [],
         platforms: [],
@@ -90,46 +92,27 @@ export default function Formulario() {
         });
     }
     function handleSelect(e) {
+      if (!inputs.genre.includes(e.target.value)){
         setInputs({
           ...inputs,
           genre: [...inputs.genre, e.target.value],
         });
     }
+  }
     function handleSubmit(e) {
-        e.preventDefault();
-        if(ErroresValidacion()){
-            if (
-              !errors.name  &&
-              !errors.description &&
-              !errors.released_at &&
-              !errors.rating &&
-              //!errors.genre &&
-              !errors.platforms
-            ) {
-              alert("Your videogame has been created successfully");
-            dispatch(postVideogames(inputs));
-            setInputs({
-                name: '',
-                description:'',
-                released_at: '',
-                rating: '',
-                genre: '',
-                platforms: [],
-              });
-            } else {
-              return alert("Faltan campos por llenar.");
-            }
-          }
-            history('/Home')
-            
-    } 
+      e.preventDefault();
+      dispatch(postVideogames(inputs))
+      alert("videojuego creado")
+      history('/Home')
+    }
+
     useEffect(() => {
         dispatch(GenreList())
     }, [dispatch])
     return (
-        <div>
+        <div className="formulario">
             <div>
-               <form onSubmit={handleSubmit}>
+               <form className="contenidof" onSubmit={handleSubmit}>
                    <h1>CREATE VIDEOGAME</h1>
                    <label>
                        Name: 
@@ -143,6 +126,13 @@ export default function Formulario() {
                        <input name="description" value={inputs.description} onChange={handleChange} type="text" />
                        <div className="erroConte">
                          <p className="ValidadorError">{errors.description}</p>
+                       </div>
+                   </label>
+                   <label>
+                       Image: 
+                       <input name="image" value={inputs.image} onChange={handleChange} type="url" />
+                       <div className="erroConte">
+                         <p className="ValidadorError">{errors.image}</p>
                        </div>
                    </label>
                    <label>

@@ -8,16 +8,19 @@
    text-transform: uppercase;
    transition: 0.5s;
    background-size: 200% auto;
-   color: rgb(34, 0, 0);            
-   box-shadow: 0 0 20px #eee;
+   color: rgb(12, 11, 11);            
+   box-shadow: 0 0 20px #eeeeee;
    border-radius: 60px;
    display: block;
+   font-family: 'Noto Serif';
+   cursor: pointer;
+   transition: all 400ms ease;
  }
 
  .filter select:hover {
    background-position: right center; /* change the direction of the change here */
-   color: #fff;
    text-decoration: none;
+   transform: translateY(-20%);
  }
  
  .filterSub{

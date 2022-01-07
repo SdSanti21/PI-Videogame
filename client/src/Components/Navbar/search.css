@@ -1,0 +1,20 @@
+.busquedaBtn {
+    height: 28px;
+    width: 80px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%);
+    font-family: 'Noto Serif';
+    color: white;
+    margin: 10px 320px 0 0;
+    cursor: pointer;
+}
+
+.barra {
+    background-color: aqua;
+    border-radius: 10px;
+    width: 190px;
+    height: 25px;
+    border: 1px solid aqua;
+    color: black;
+    font-family: 'Noto Serif';
+}
